@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  { icon: '☁️', title: 'Cloud Infrastructure', desc: 'Azure, AWS, and GCP — architected for scale, security, and sovereignty.' },
+  { icon: '🏛️', title: 'Sovereign Cloud', desc: 'Data residency, compliance, and infrastructure independence for regulated industries.' },
+  { icon: '🤖', title: 'AI Infrastructure', desc: 'GPU clusters, ML pipelines, and inference platforms — built cloud-native from day one.' },
+  { icon: '⎈', title: 'Kubernetes & CNCF', desc: 'Production-grade Kubernetes, service mesh, GitOps, and the entire cloud-native stack.' },
+  { icon: '🔓', title: 'Open Source Strategy', desc: 'Contribution models, community building, and sustainable open source for enterprises.' },
+  { icon: '🚀', title: 'Platform Engineering', desc: 'Internal developer platforms, golden paths, and self-service infrastructure.' },
+];
+
+const values = [
+  { title: 'Engineering Excellence', desc: 'We don\'t ship demos. Every solution is production-grade, battle-tested, and built to last.' },
+  { title: 'Open Source First', desc: 'Open source isn\'t just a strategy — it\'s how good software gets built. We contribute upstream and build in the open.' },
+  { title: 'Sovereignty by Design', desc: 'Your data, your infrastructure, your rules. We architect for independence, not vendor lock-in.' },
+  { title: 'Pragmatic Innovation', desc: 'New technology is only valuable when it solves real problems. We adopt what works, not what\'s trending.' },
+  { title: 'Transparency & Trust', desc: 'No black boxes. Clear communication, honest timelines, and architecture you can understand and own.' },
+];
+---
+
+<Layout title="Lovelace Engineering — Cloud-Native & AI-Native Consulting">
+
+<style>
+  /* Nav */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 50;
+    background: rgba(10, 14, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+  .logo span { color: var(--text-dim); font-weight: 400; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 6rem 2rem 4rem;
+    max-width: 900px; margin: 0 auto;
+  }
+  .hero-tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent);
+    margin-bottom: 1.5rem; letter-spacing: 0.05em;
+  }
+  .hero-tag::before { content: '> '; opacity: 0.5; }
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700;
+    line-height: 1.1; margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; margin-bottom: 2.5rem; }
+  .cta {
+    display: inline-block; padding: 0.8rem 2rem;
+    background: var(--accent); color: var(--bg); font-weight: 600;
+    text-decoration: none; border-radius: 4px; font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .cta:hover { background: var(--accent-dim); transform: translateY(-1px); }
+
+  /* Sections */
+  section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+    color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  h2 { font-size: 2rem; font-weight: 700; margin-bottom: 3rem; }
+
+  /* Services Grid */
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 2rem; transition: border-color 0.2s, transform 0.2s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .card p { color: var(--text-dim); font-size: 0.9rem; }
+
+  /* About */
+  .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-text p { color: var(--text-dim); margin-bottom: 1rem; font-size: 1rem; }
+  .about-text strong { color: var(--text); }
+  .credentials { list-style: none; }
+  .credentials li {
+    padding: 0.75rem 0; border-bottom: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+  .credentials li::before { content: '→ '; color: var(--accent); }
+
+  /* Values */
+  .values-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .value-item {
+    display: grid; grid-template-columns: auto 1fr; gap: 1.5rem;
+    padding: 1.5rem; background: var(--bg-light); border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+  }
+  .value-num {
+    font-family: 'JetBrains Mono', monospace; font-size: 1.5rem;
+    color: var(--accent); opacity: 0.5; font-weight: 700;
+  }
+  .value-item h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .value-item p { color: var(--text-dim); font-size: 0.9rem; }
+
+  /* Contact */
+  .contact-section {
+    text-align: center; padding: 6rem 2rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+  }
+  .contact-section p { color: var(--text-dim); margin-bottom: 2rem; font-size: 1.1rem; }
+
+  /* Footer */
+  footer {
+    text-align: center; padding: 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim); font-size: 0.8rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .about-content { grid-template-columns: 1fr; gap: 2rem; }
+    section { padding: 4rem 1.5rem; }
+  }
+</style>
+
+<!-- Nav -->
+<nav>
+  <a href="/" class="logo">lovelace<span>.engineering</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#values">Values</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <p class="hero-tag">cloud-native · ai-native · open source</p>
+  <h1>Engineering the future of cloud infrastructure</h1>
+  <p>We help enterprises and open source projects build sovereign, scalable, AI-ready infrastructure — from bare metal to production.</p>
+  <a href="#contact" class="cta">Get in touch</a>
+</div>
+
+<!-- Services -->
+<section id="services">
+  <p class="section-label">What we do</p>
+  <h2>Services</h2>
+  <div class="grid">
+    {services.map(s => (
+      <div class="card">
+        <div class="card-icon">{s.icon}</div>
+        <h3>{s.title}</h3>
+        <p>{s.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <p class="section-label">Who we are</p>
+  <h2>About</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p><strong>Lovelace Engineering</strong> was founded over a decade ago by <strong>Alessandro Vozza</strong> with a simple premise: cloud infrastructure should be open, sovereign, and built to last.</p>
+      <p>We've since worked with enterprises, startups, and open source foundations across Europe and beyond — architecting platforms that scale from zero to planetary.</p>
+      <p>Today, we're at the intersection of cloud-native and AI-native — helping organizations build the infrastructure that will power the next generation of intelligent systems.</p>
+    </div>
+    <ul class="credentials">
+      <li>10+ years in cloud infrastructure</li>
+      <li>CNCF Golden Kubestronaut</li>
+      <li>KubeCon speaker & community leader</li>
+      <li>Microsoft Cloud Solution Architect</li>
+      <li>Open source contributor & maintainer</li>
+      <li>PhD researcher</li>
+      <li>Azure · AWS · GCP certified</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Values -->
+<section id="values">
+  <p class="section-label">What we believe</p>
+  <h2>Values</h2>
+  <div class="values-list">
+    {values.map((v, i) => (
+      <div class="value-item">
+        <span class="value-num">{String(i + 1).padStart(2, '0')}</span>
+        <div>
+          <h3>{v.title}</h3>
+          <p>{v.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- Contact -->
+<div class="contact-section" id="contact">
+  <p class="section-label">Let's talk</p>
+  <h2>Ready to build?</h2>
+  <p>Whether you're modernizing infrastructure, adopting AI, or going cloud-native — we can help.</p>
+  <a href="mailto:alessandro.vozza@linux.com" class="cta">alessandro.vozza@linux.com</a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Lovelace Engineering. Built with craft.</p>
+</footer>
+
+</Layout>
