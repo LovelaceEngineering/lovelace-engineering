@@ -1,224 +1,694 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const services = [
-  { icon: '☁️', title: 'Cloud Infrastructure', desc: 'Azure, AWS, and GCP — architected for scale, security, and sovereignty.' },
-  { icon: '🏛️', title: 'Sovereign Cloud', desc: 'Data residency, compliance, and infrastructure independence for regulated industries.' },
-  { icon: '🤖', title: 'AI Infrastructure', desc: 'GPU clusters, ML pipelines, and inference platforms — built cloud-native from day one.' },
-  { icon: '⎈', title: 'Kubernetes & CNCF', desc: 'Production-grade Kubernetes, service mesh, GitOps, and the entire cloud-native stack.' },
-  { icon: '🔓', title: 'Open Source Strategy', desc: 'Contribution models, community building, and sustainable open source for enterprises.' },
-  { icon: '🚀', title: 'Platform Engineering', desc: 'Internal developer platforms, golden paths, and self-service infrastructure.' },
-];
-
-const values = [
-  { title: 'Engineering Excellence', desc: 'We don\'t ship demos. Every solution is production-grade, battle-tested, and built to last.' },
-  { title: 'Open Source First', desc: 'Open source isn\'t just a strategy — it\'s how good software gets built. We contribute upstream and build in the open.' },
-  { title: 'Sovereignty by Design', desc: 'Your data, your infrastructure, your rules. We architect for independence, not vendor lock-in.' },
-  { title: 'Pragmatic Innovation', desc: 'New technology is only valuable when it solves real problems. We adopt what works, not what\'s trending.' },
-  { title: 'Transparency & Trust', desc: 'No black boxes. Clear communication, honest timelines, and architecture you can understand and own.' },
-];
 ---
 
-<Layout title="Lovelace Engineering — Cloud-Native & AI-Native Consulting">
+<Layout title="Lovelace Engineering — Sovereign AI Infrastructure for Europe">
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">◆</span>
+        <span>Lovelace Engineering</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#ai">AI Infrastructure</a>
+        <a href="#sovereign">Sovereign Cloud</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="mobile-menu" id="mobile-menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge fade-in">🇪🇺 European Digital Sovereignty</div>
+      <h1 class="hero-title fade-in">
+        Sovereign <span class="gradient-text">AI-Native</span><br/>Infrastructure for Europe
+      </h1>
+      <p class="hero-subtitle fade-in">
+        We architect cloud-native platforms and AI inference infrastructure that keeps European data sovereign, compliant, and performant at scale.
+      </p>
+      <div class="hero-actions fade-in">
+        <a href="#contact" class="btn btn-primary">Start a Conversation →</a>
+        <a href="#services" class="btn btn-secondary">Explore Services</a>
+      </div>
+      <div class="hero-stats fade-in">
+        <div class="stat"><span class="stat-value">15+</span><span class="stat-label">Years Experience</span></div>
+        <div class="stat"><span class="stat-value">CNCF</span><span class="stat-label">Ecosystem Expert</span></div>
+        <div class="stat"><span class="stat-value">EU</span><span class="stat-label">Data Sovereign</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <p class="section-label fade-in">What We Do</p>
+      <h2 class="section-title fade-in">Engineering at the Intersection of<br/><span class="gradient-text">Cloud Native, AI & Sovereignty</span></h2>
+      <p class="section-subtitle fade-in">Deep technical expertise across the entire cloud-native stack, from Kubernetes internals to GPU scheduling for large-scale AI inference.</p>
+      <div class="services-grid">
+        <div class="card fade-in">
+          <div class="card-icon">⚙️</div>
+          <h3>Platform Engineering</h3>
+          <p>Internal Developer Platforms, golden paths, self-service infrastructure. Backstage, Kratix, Crossplane.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">☸️</div>
+          <h3>Kubernetes at Scale</h3>
+          <p>Multi-cluster fleet management, service mesh (Istio, Cilium), eBPF networking, GitOps with Flux & ArgoCD.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🤖</div>
+          <h3>AI Infrastructure</h3>
+          <p>GPU inference platforms, llm-d, vLLM, multi-GPU scheduling, model serving at scale on Kubernetes.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🔒</div>
+          <h3>Cloud-Native Security</h3>
+          <p>Runtime protection with Falco, policy engines (OPA, Kyverno), supply chain security, zero-trust architectures.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🇪🇺</div>
+          <h3>Sovereign Cloud</h3>
+          <p>GDPR-compliant infrastructure, EU data residency, NIS2 compliance, Gaia-X integration.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🔄</div>
+          <h3>MLOps & LLMOps</h3>
+          <p>End-to-end ML pipelines, fine-tuning infrastructure, RAG systems, vector databases on Kubernetes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Infrastructure Spotlight -->
+  <section class="section section-alt" id="ai">
+    <div class="container">
+      <p class="section-label fade-in">Deep Dive</p>
+      <h2 class="section-title fade-in">AI Infrastructure<br/><span class="gradient-text">Built for Production</span></h2>
+      <p class="section-subtitle fade-in">From GPU clusters to intelligent routing — we build the infrastructure that makes AI work at enterprise scale.</p>
+
+      <div class="ai-grid">
+        <div class="ai-card glass-card fade-in">
+          <h4>🚀 Inference at Scale</h4>
+          <ul>
+            <li>llm-d — Kubernetes-native LLM inference daemon</li>
+            <li>vLLM & TGI deployment patterns</li>
+            <li>Triton Inference Server orchestration</li>
+            <li>NVIDIA GPU Operator & MIG scheduling</li>
+          </ul>
+        </div>
+        <div class="ai-card glass-card fade-in">
+          <h4>🧠 Agentic AI</h4>
+          <ul>
+            <li>Agentic orchestration on Kubernetes</li>
+            <li>AI Gateway & routing patterns (LiteLLM)</li>
+            <li>Multi-model inference pipelines</li>
+            <li>Autoscaling based on token throughput</li>
+          </ul>
+        </div>
+        <div class="ai-card glass-card fade-in">
+          <h4>📊 RAG & Data</h4>
+          <ul>
+            <li>Vector databases (Qdrant, Weaviate, Milvus)</li>
+            <li>Embedding pipelines at scale</li>
+            <li>Retrieval-augmented generation infra</li>
+            <li>Knowledge graph integration</li>
+          </ul>
+        </div>
+        <div class="ai-card glass-card fade-in">
+          <h4>🔧 MLOps & Fine-tuning</h4>
+          <ul>
+            <li>Distributed training on Kubernetes</li>
+            <li>LoRA/QLoRA fine-tuning pipelines</li>
+            <li>Model registry & versioning</li>
+            <li>Continuous evaluation & monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sovereign Cloud -->
+  <section class="section" id="sovereign">
+    <div class="container">
+      <div class="sovereign-layout">
+        <div class="sovereign-text">
+          <p class="section-label fade-in">European First</p>
+          <h2 class="section-title fade-in">Digital Sovereignty<br/><span class="gradient-text">By Design</span></h2>
+          <p class="section-subtitle fade-in">Infrastructure that respects European values. Data stays in Europe, compliance is built-in, and sovereignty isn't an afterthought.</p>
+          <div class="sovereign-list fade-in">
+            <div class="sovereign-item"><span>✓</span> GDPR-compliant by architecture</div>
+            <div class="sovereign-item"><span>✓</span> EU data residency guarantees</div>
+            <div class="sovereign-item"><span>✓</span> NIS2 Directive readiness</div>
+            <div class="sovereign-item"><span>✓</span> EU AI Act compliance infrastructure</div>
+            <div class="sovereign-item"><span>✓</span> Gaia-X ecosystem integration</div>
+            <div class="sovereign-item"><span>✓</span> European providers: Scaleway, OVH, Hetzner</div>
+          </div>
+        </div>
+        <div class="sovereign-visual fade-in">
+          <div class="glass-card sovereign-card">
+            <div class="eu-flag">🇪🇺</div>
+            <h4>Data never leaves the EU</h4>
+            <p>Every component — compute, storage, networking — runs on European soil with European providers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <p class="section-label fade-in">Who We Are</p>
+      <h2 class="section-title fade-in">Deep Expertise,<br/><span class="gradient-text">Proven Track Record</span></h2>
+      <div class="about-content fade-in">
+        <div class="about-card glass-card">
+          <h3>Alessandro Vozza</h3>
+          <p class="about-role">Founder & Principal Consultant</p>
+          <p>15+ years building cloud infrastructure at scale. From Microsoft to startups, from bare metal to serverless — and now focused on making AI infrastructure work for European organizations.</p>
+          <div class="credentials">
+            <span class="credential">🏅 Golden Kubestronaut</span>
+            <span class="credential">🎤 KubeCon Speaker</span>
+            <span class="credential">🎓 PhD</span>
+            <span class="credential">☁️ CNCF Ambassador</span>
+            <span class="credential">📜 CKA/CKAD/CKS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" id="values">
+    <div class="container">
+      <p class="section-label fade-in">Our Principles</p>
+      <h2 class="section-title fade-in">Built on <span class="gradient-text">Values</span></h2>
+      <div class="values-grid">
+        <div class="card fade-in">
+          <h3>🌍 Open Source First</h3>
+          <p>We build on and contribute to open source. No vendor lock-in, no black boxes.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>🛡️ Security by Default</h3>
+          <p>Zero-trust, least privilege, defense in depth. Security isn't a feature — it's the foundation.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>📐 Engineering Excellence</h3>
+          <p>Clean architectures, reproducible infrastructure, documentation that matters.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>🤝 Knowledge Transfer</h3>
+          <p>We don't just build — we teach. Your team owns the platform when we're done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <p class="section-label fade-in">Let's Talk</p>
+      <h2 class="section-title fade-in">Ready to Build<br/><span class="gradient-text">Something Great?</span></h2>
+      <p class="section-subtitle fade-in">Whether you're planning a sovereign cloud migration, deploying AI at scale, or building an internal platform — let's discuss how we can help.</p>
+      <div class="contact-form-wrapper fade-in">
+        <form class="contact-form glass-card" action="https://formspree.io/f/xpwzgkdl" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@company.eu" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your organization" />
+            </div>
+            <div class="form-group">
+              <label for="interest">Interest</label>
+              <select id="interest" name="interest">
+                <option value="">Select area of interest</option>
+                <option value="sovereign-cloud">Sovereign Cloud & EU Compliance</option>
+                <option value="ai-infrastructure">AI Infrastructure</option>
+                <option value="platform-engineering">Platform Engineering</option>
+                <option value="kubernetes">Kubernetes & Cloud Native</option>
+                <option value="security">Cloud-Native Security</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">◆</span>
+        <span>Lovelace Engineering</span>
+        <p class="footer-tagline">Sovereign AI-Native Infrastructure for Europe 🇪🇺</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#ai">AI Infrastructure</a>
+        <a href="#sovereign">Sovereign Cloud</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/ams0" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/intfrr" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com/intfrr" target="_blank" rel="noopener">X/Twitter</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Lovelace Engineering. Amsterdam, Netherlands.</p>
+      </div>
+    </div>
+  </footer>
+</Layout>
 
 <style>
   /* Nav */
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 50;
-    background: rgba(10, 14, 23, 0.85);
-    backdrop-filter: blur(12px);
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
-    padding: 1rem 2rem;
-    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 0;
   }
-  .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
-  .logo span { color: var(--text-dim); font-weight: 400; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--accent); }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  .logo-icon {
+    font-size: 1.4rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .nav-links a {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .btn-sm { padding: 10px 20px; font-size: 0.8125rem; }
+
+  .theme-toggle {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    margin-left: 16px;
+  }
+  .theme-toggle:hover {
+    border-color: var(--border-hover);
+    color: var(--text);
+  }
+  [data-theme="dark"] .icon-moon { display: none; }
+  [data-theme="light"] .icon-sun { display: none; }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .mobile-menu span {
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+  }
 
   /* Hero */
   .hero {
-    min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
-    padding: 6rem 2rem 4rem;
-    max-width: 900px; margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+    overflow: hidden;
   }
-  .hero-tag {
-    font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent);
-    margin-bottom: 1.5rem; letter-spacing: 0.05em;
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-glow), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 20%, rgba(139, 92, 246, 0.1), transparent);
   }
-  .hero-tag::before { content: '> '; opacity: 0.5; }
-  h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700;
-    line-height: 1.1; margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
   }
-  .hero p { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; margin-bottom: 2.5rem; }
-  .cta {
-    display: inline-block; padding: 0.8rem 2rem;
-    background: var(--accent); color: var(--bg); font-weight: 600;
-    text-decoration: none; border-radius: 4px; font-size: 0.95rem;
-    transition: all 0.2s;
+  .hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
   }
-  .cta:hover { background: var(--accent-dim); transform: translateY(-1px); }
+  .hero-title {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+  }
+  .stat { text-align: center; }
+  .stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+  }
+  .stat-label {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+  }
 
-  /* Sections */
-  section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
-  .section-label {
-    font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
-    color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase;
-    margin-bottom: 0.5rem;
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
   }
-  h2 { font-size: 2rem; font-weight: 700; margin-bottom: 3rem; }
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  .card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .card p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
 
-  /* Services Grid */
-  .grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+  /* AI Grid */
+  .section-alt {
+    background: var(--bg-secondary);
   }
-  .card {
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
-    padding: 2rem; transition: border-color 0.2s, transform 0.2s;
+  .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
   }
-  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-  .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-  .card p { color: var(--text-dim); font-size: 0.9rem; }
+  .ai-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .ai-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ai-card li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+  }
+  .ai-card li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-weight: 700;
+  }
+
+  /* Sovereign */
+  .sovereign-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .sovereign-list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sovereign-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+  }
+  .sovereign-item span {
+    color: var(--accent-light);
+    font-weight: 700;
+  }
+  .sovereign-card {
+    text-align: center;
+    padding: 48px;
+  }
+  .eu-flag {
+    font-size: 4rem;
+    margin-bottom: 16px;
+  }
+  .sovereign-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .sovereign-card p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+  }
 
   /* About */
-  .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .about-text p { color: var(--text-dim); margin-bottom: 1rem; font-size: 1rem; }
-  .about-text strong { color: var(--text); }
-  .credentials { list-style: none; }
-  .credentials li {
-    padding: 0.75rem 0; border-bottom: 1px solid var(--border);
-    font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
-    color: var(--text-dim);
+  .about-content { margin-top: 48px; max-width: 700px; }
+  .about-card h3 { font-size: 1.5rem; font-weight: 800; }
+  .about-role {
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 16px;
   }
-  .credentials li::before { content: '→ '; color: var(--accent); }
+  .about-card > p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+  .credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .credential {
+    padding: 6px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
 
   /* Values */
-  .values-list { display: flex; flex-direction: column; gap: 1.5rem; }
-  .value-item {
-    display: grid; grid-template-columns: auto 1fr; gap: 1.5rem;
-    padding: 1.5rem; background: var(--bg-light); border-left: 3px solid var(--accent);
-    border-radius: 0 8px 8px 0;
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
   }
-  .value-num {
-    font-family: 'JetBrains Mono', monospace; font-size: 1.5rem;
-    color: var(--accent); opacity: 0.5; font-weight: 700;
-  }
-  .value-item h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
-  .value-item p { color: var(--text-dim); font-size: 0.9rem; }
 
   /* Contact */
-  .contact-section {
-    text-align: center; padding: 6rem 2rem;
-    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+  .contact-form-wrapper {
+    max-width: 700px;
+    margin-top: 48px;
   }
-  .contact-section p { color: var(--text-dim); margin-bottom: 2rem; font-size: 1.1rem; }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-group label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 0.9375rem;
+    color: var(--text);
+    font-family: var(--font-sans);
+    transition: border-color var(--transition);
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .form-group textarea { resize: vertical; }
 
   /* Footer */
-  footer {
-    text-align: center; padding: 2rem;
+  .footer {
     border-top: 1px solid var(--border);
-    color: var(--text-dim); font-size: 0.8rem;
+    padding: 64px 0 32px;
+  }
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+  }
+  .footer-tagline {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+  .footer-links, .footer-social {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-links a, .footer-social a {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+  .footer-bottom p {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
   }
 
-  /* Responsive */
+  /* Mobile */
   @media (max-width: 768px) {
     .nav-links { display: none; }
-    .about-content { grid-template-columns: 1fr; gap: 2rem; }
-    section { padding: 4rem 1.5rem; }
+    .mobile-menu { display: flex; }
+    .hero-stats { gap: 32px; }
+    .sovereign-layout { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.5rem; }
   }
 </style>
 
-<!-- Nav -->
-<nav>
-  <a href="/" class="logo">lovelace<span>.engineering</span></a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#values">Values</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<script>
+  // Theme toggle
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
 
-<!-- Hero -->
-<div class="hero">
-  <p class="hero-tag">cloud-native · ai-native · open source</p>
-  <h1>Engineering the future of cloud infrastructure</h1>
-  <p>We help enterprises and open source projects build sovereign, scalable, AI-ready infrastructure — from bare metal to production.</p>
-  <a href="#contact" class="cta">Get in touch</a>
-</div>
+  // Intersection Observer for fade-in animations
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
 
-<!-- Services -->
-<section id="services">
-  <p class="section-label">What we do</p>
-  <h2>Services</h2>
-  <div class="grid">
-    {services.map(s => (
-      <div class="card">
-        <div class="card-icon">{s.icon}</div>
-        <h3>{s.title}</h3>
-        <p>{s.desc}</p>
-      </div>
-    ))}
-  </div>
-</section>
-
-<!-- About -->
-<section id="about">
-  <p class="section-label">Who we are</p>
-  <h2>About</h2>
-  <div class="about-content">
-    <div class="about-text">
-      <p><strong>Lovelace Engineering</strong> was founded over a decade ago by <strong>Alessandro Vozza</strong> with a simple premise: cloud infrastructure should be open, sovereign, and built to last.</p>
-      <p>We've since worked with enterprises, startups, and open source foundations across Europe and beyond — architecting platforms that scale from zero to planetary.</p>
-      <p>Today, we're at the intersection of cloud-native and AI-native — helping organizations build the infrastructure that will power the next generation of intelligent systems.</p>
-    </div>
-    <ul class="credentials">
-      <li>10+ years in cloud infrastructure</li>
-      <li>CNCF Golden Kubestronaut</li>
-      <li>KubeCon speaker & community leader</li>
-      <li>Microsoft Cloud Solution Architect</li>
-      <li>Open source contributor & maintainer</li>
-      <li>PhD researcher</li>
-      <li>Azure · AWS · GCP certified</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Values -->
-<section id="values">
-  <p class="section-label">What we believe</p>
-  <h2>Values</h2>
-  <div class="values-list">
-    {values.map((v, i) => (
-      <div class="value-item">
-        <span class="value-num">{String(i + 1).padStart(2, '0')}</span>
-        <div>
-          <h3>{v.title}</h3>
-          <p>{v.desc}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
-
-<!-- Contact -->
-<div class="contact-section" id="contact">
-  <p class="section-label">Let's talk</p>
-  <h2>Ready to build?</h2>
-  <p>Whether you're modernizing infrastructure, adopting AI, or going cloud-native — we can help.</p>
-  <a href="mailto:alessandro.vozza@linux.com" class="cta">alessandro.vozza@linux.com</a>
-</div>
-
-<!-- Footer -->
-<footer>
-  <p>© 2026 Lovelace Engineering. Built with craft.</p>
-</footer>
-
-</Layout>
+  document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+</script>
