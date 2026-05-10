@@ -15,6 +15,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="#ai">AI Infrastructure</a>
         <a href="#sovereign">Sovereign Cloud</a>
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
       </div>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
@@ -215,6 +216,94 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-label fade-in">Open Source</p>
+      <h2 class="section-title fade-in">Our <span class="gradient-text">Projects</span></h2>
+      <p class="section-subtitle fade-in">Tools, platforms, and training materials we've built — all open source.</p>
+      <div class="projects-grid">
+        <a href="https://cloud-repatriation.lovelace.engineering" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">🔄</div>
+          <h3>Cloud Repatriation Tool</h3>
+          <p>Interactive assessment for cloud-to-on-prem migration decisions. Cost modeling, risk analysis, and migration readiness scoring.</p>
+          <div class="project-links">
+            <span class="project-link">cloud-repatriation.lovelace.engineering ↗</span>
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/cloud-repatriation-tool" target="_blank" onclick="event.stopPropagation()">Source</a></span>
+          </div>
+        </a>
+        <a href="https://mcpskills.dev" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">🔌</div>
+          <h3>MCPSkills.dev</h3>
+          <p>The largest directory of MCP (Model Context Protocol) servers. Search, discover, and compare MCP servers for AI agents.</p>
+          <div class="project-links">
+            <span class="project-link">mcpskills.dev ↗</span>
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/mcpskills" target="_blank" onclick="event.stopPropagation()">Source</a></span>
+          </div>
+        </a>
+        <a href="https://mission-control.lovelace.engineering" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">🎛️</div>
+          <h3>Mission Control</h3>
+          <p>Dashboard UI for managing OpenClaw AI agents. Monitor tools, agents, logs, and settings in one place.</p>
+          <div class="project-links">
+            <span class="project-link">mission-control.lovelace.engineering ↗</span>
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/mission-control" target="_blank" onclick="event.stopPropagation()">Source</a></span>
+          </div>
+        </a>
+        <a href="https://github.com/LovelaceEngineering/projects/tree/main/openclaw-prometheus-exporter" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">📊</div>
+          <h3>Prometheus Exporter</h3>
+          <p>Prometheus metrics exporter for OpenClaw AI token usage and cost tracking. Ready for Grafana dashboards.</p>
+          <div class="project-links">
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/openclaw-prometheus-exporter" target="_blank" onclick="event.stopPropagation()">Source ↗</a></span>
+          </div>
+        </a>
+        <a href="https://k8s-course.lovelace.engineering" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">☸️</div>
+          <h3>K8s Course</h3>
+          <p>Intensive Kubernetes training course in Italian. 9 sessions, from Linux namespaces to GitOps production-ready.</p>
+          <div class="project-links">
+            <span class="project-link">k8s-course.lovelace.engineering ↗</span>
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/k8s-course" target="_blank" onclick="event.stopPropagation()">Source</a></span>
+          </div>
+        </a>
+        <a href="https://letsclaude.lovelace.engineering" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">🤖</div>
+          <h3>LetsClaude</h3>
+          <p>Training and consulting for the Anthropic Claude platform. Courses on Claude Code, Agent SDK, and Claude API.</p>
+          <div class="project-links">
+            <span class="project-link">letsclaude.lovelace.engineering ↗</span>
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/letsclaude" target="_blank" onclick="event.stopPropagation()">Source</a></span>
+          </div>
+        </a>
+        <a href="https://github.com/LovelaceEngineering/projects/tree/main/network-monitor" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">🌐</div>
+          <h3>Network Monitor</h3>
+          <p>Full-stack network monitoring with Zeek, Elasticsearch & Kibana. Captures every connection, alerts on anomalies.</p>
+          <div class="project-links">
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/network-monitor" target="_blank" onclick="event.stopPropagation()">Source ↗</a></span>
+          </div>
+        </a>
+        <a href="https://github.com/LovelaceEngineering/projects/tree/main/genai-k8s-workshop" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">🧠</div>
+          <h3>GenAI K8s Workshop</h3>
+          <p>Hands-on GenAI on Kubernetes workshop. Deploy LLMs with vLLM, KServe, KAITO, llm-d, and Gateway API.</p>
+          <div class="project-links">
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/genai-k8s-workshop" target="_blank" onclick="event.stopPropagation()">Source ↗</a></span>
+          </div>
+        </a>
+        <a href="https://github.com/LovelaceEngineering/projects/tree/main/trading-bot" target="_blank" class="project-card glass-card fade-in">
+          <div class="project-icon">📈</div>
+          <h3>Trading Bot</h3>
+          <p>Pure Python DCA trading bot for Coinbase Advanced Trade. Deterministic rules, no LLM — designed for automated investing.</p>
+          <div class="project-links">
+            <span class="project-source"><a href="https://github.com/LovelaceEngineering/projects/tree/main/trading-bot" target="_blank" onclick="event.stopPropagation()">Source ↗</a></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="section section-alt" id="contact">
     <div class="container">
@@ -274,6 +363,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="#ai">AI Infrastructure</a>
         <a href="#sovereign">Sovereign Cloud</a>
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-social">
@@ -571,6 +661,60 @@ import Layout from '../layouts/Layout.astro';
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
     margin-top: 48px;
+  }
+
+  /* Projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+  }
+  .project-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  .project-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
+  .project-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  .project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 0.8125rem;
+  }
+  .project-link {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .project-source a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  .project-source a:hover {
+    color: var(--accent);
   }
 
   /* Contact */
