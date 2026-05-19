@@ -15,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="#ai">AI Infrastructure</a>
         <a href="#sovereign">Sovereign Cloud</a>
         <a href="#about">About</a>
-        <a href="#ada">Ada Lovelace</a>
+        <a href="#ada">Ada</a>
         <a href="#projects">Projects</a>
         <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
       </div>
@@ -195,8 +195,12 @@ import Layout from '../layouts/Layout.astro';
   <section class="section" id="ada">
     <div class="container">
       <p class="section-label fade-in">Our Namesake</p>
-      <h2 class="section-title fade-in">Ada Lovelace<br/><span class="gradient-text">The First Programmer</span></h2>
+      <h2 class="section-title fade-in">Ada Lovelace <span class="ada-years">(1815–1852)</span><br/><span class="gradient-text">The First Programmer</span></h2>
       <div class="ada-layout">
+        <div class="ada-portrait fade-in">
+          <img src="/ada-lovelace-lg.jpg" alt="Portrait of Ada Lovelace, painted by Alfred Edward Chalon, 1838" class="ada-portrait-img" />
+          <span class="ada-portrait-caption">Alfred Edward Chalon, 1838</span>
+        </div>
         <div class="ada-bio fade-in">
           <div class="glass-card ada-card">
             <p class="ada-intro">Augusta Ada King, Countess of Lovelace (1815–1852), was an English mathematician and writer — widely recognised as the world's first computer programmer.</p>
@@ -395,7 +399,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="#ai">AI Infrastructure</a>
         <a href="#sovereign">Sovereign Cloud</a>
         <a href="#about">About</a>
-        <a href="#ada">Ada Lovelace</a>
+        <a href="#ada">Ada</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
@@ -698,9 +702,44 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* Ada Lovelace */
+  .ada-years {
+    font-size: 0.45em;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
   .ada-layout {
     margin-top: 48px;
-    max-width: 800px;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .ada-portrait {
+    text-align: center;
+  }
+  .ada-portrait-img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--accent);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+  .ada-portrait-caption {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  @media (max-width: 700px) {
+    .ada-layout {
+      grid-template-columns: 1fr;
+    }
+    .ada-portrait-img {
+      max-width: 180px;
+    }
   }
   .ada-card {
     padding: 40px;
