@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
   <nav class="nav">
     <div class="container nav-inner">
       <a href="/" class="nav-logo">
-        <span class="logo-icon">◆</span>
+        <img src="/ada-lovelace-sm.jpg" alt="Ada Lovelace" class="nav-ada" />
         <span>Lovelace Engineering</span>
       </a>
       <div class="nav-links">
@@ -15,6 +15,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="#ai">AI Infrastructure</a>
         <a href="#sovereign">Sovereign Cloud</a>
         <a href="#about">About</a>
+        <a href="#ada">Ada Lovelace</a>
         <a href="#projects">Projects</a>
         <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
       </div>
@@ -184,6 +185,37 @@ import Layout from '../layouts/Layout.astro';
             <span class="credential">🎓 PhD</span>
             <span class="credential">☁️ CNCF Ambassador</span>
             <span class="credential">📜 CKA/CKAD/CKS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ada Lovelace -->
+  <section class="section" id="ada">
+    <div class="container">
+      <p class="section-label fade-in">Our Namesake</p>
+      <h2 class="section-title fade-in">Ada Lovelace<br/><span class="gradient-text">The First Programmer</span></h2>
+      <div class="ada-layout">
+        <div class="ada-bio fade-in">
+          <div class="glass-card ada-card">
+            <p class="ada-intro">Augusta Ada King, Countess of Lovelace (1815–1852), was an English mathematician and writer — widely recognised as the world's first computer programmer.</p>
+            <p>Working alongside Charles Babbage on his Analytical Engine, Ada saw what no one else did: that a computing machine could go far beyond mere calculation. In her famous 1843 Notes, she wrote the first algorithm intended to be carried out by a machine, and envisioned computers creating music, art, and science — a century before the first electronic computer was built.</p>
+            <h4>Key Achievements</h4>
+            <ul>
+              <li>Wrote the first published computer algorithm (Note G, for computing Bernoulli numbers)</li>
+              <li>Recognised that computing machines could manipulate symbols, not just numbers — the conceptual leap that underpins all of software</li>
+              <li>Predicted that machines could compose music and process language, anticipating modern AI by over 150 years</li>
+              <li>Distinguished between what machines can calculate and what they can originate — a question still central to AI ethics today</li>
+              <li>Bridged the gap between mathematics and imagination, calling her approach "poetical science"</li>
+            </ul>
+            <h4>Why She Inspires Us</h4>
+            <p>Ada Lovelace saw the future of computing when the technology didn't even exist yet. She combined rigorous mathematical thinking with boundless creative vision — precisely the mindset needed to build the AI infrastructure of tomorrow.</p>
+            <p>We named our company after her because Lovelace Engineering carries the same belief: that technology is most powerful when imagination and engineering meet. Every sovereign AI platform we build, every Kubernetes cluster we architect, continues the work she started — making machines serve human ambition.</p>
+            <div class="ada-quote">
+              <blockquote>"The Analytical Engine weaves algebraic patterns, just as the Jacquard loom weaves flowers and leaves."</blockquote>
+              <cite>— Ada Lovelace, 1843</cite>
+            </div>
           </div>
         </div>
       </div>
@@ -363,6 +395,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="#ai">AI Infrastructure</a>
         <a href="#sovereign">Sovereign Cloud</a>
         <a href="#about">About</a>
+        <a href="#ada">Ada Lovelace</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
@@ -411,6 +444,15 @@ import Layout from '../layouts/Layout.astro';
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  .nav-ada {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 15%;
+    border: 2px solid var(--accent);
+    flex-shrink: 0;
   }
   .nav-links {
     display: flex;
@@ -652,6 +694,78 @@ import Layout from '../layouts/Layout.astro';
     border: 1px solid var(--border);
     border-radius: 100px;
     font-size: 0.8125rem;
+    font-weight: 500;
+  }
+
+  /* Ada Lovelace */
+  .ada-layout {
+    margin-top: 48px;
+    max-width: 800px;
+  }
+  .ada-card {
+    padding: 40px;
+  }
+  .ada-intro {
+    font-size: 1.125rem;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .ada-card > p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 0.9375rem;
+  }
+  .ada-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-top: 28px;
+  }
+  .ada-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .ada-card li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .ada-card li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-size: 0.65rem;
+    top: 4px;
+  }
+  .ada-quote {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  .ada-quote blockquote {
+    font-style: italic;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .ada-quote cite {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    font-style: normal;
     font-weight: 500;
   }
 
